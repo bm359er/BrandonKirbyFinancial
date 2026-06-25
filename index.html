@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canada First Investing | Brandon Kirby, MBA</title>
+    <title>Brandon Kirby | Wealth, Insurance & Tax Advisory</title>
     <style>
         :root {
             --primary: #0f2b46;
-            --secondary: #b91c1c; /* Distinct Maple Crimson Accent */
+            --secondary: #1d4ed8;
             --text-dark: #1f2937;
             --text-light: #f9fafb;
             --bg-light: #f3f4f6;
+            --accent: #059669;
+            --crimson: #b91c1c;
         }
 
         * {
@@ -18,6 +20,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling when linking to sections */
         }
 
         body {
@@ -26,6 +29,7 @@
             background-color: #ffffff;
         }
 
+        /* Navigation */
         nav {
             background-color: var(--primary);
             color: var(--text-light);
@@ -57,105 +61,240 @@
             color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
             color: #93c5fd;
         }
 
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(15, 43, 70, 0.9), rgba(15, 43, 70, 0.85)), url('https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(15, 43, 70, 0.9), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
             color: var(--text-light);
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.75rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Sections General */
         section {
-            padding: 4rem 2rem;
-            max-width: 1000px;
+            padding: 5rem 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        h2.content-heading {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--bg-light);
-            padding-bottom: 0.5rem;
-        }
-
-        .intro-text p {
-            font-size: 1.15rem;
-            margin-bottom: 1.25rem;
-            color: #374151;
-        }
-
-        .advantage-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .advantage-card {
-            background-color: var(--bg-light);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 6px solid var(--secondary);
-        }
-
-        .advantage-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            font-size: 1.3rem;
-        }
-
-        .advantage-card p {
-            color: #4b5563;
-            font-size: 1.05rem;
-        }
-
-        .contact-cta {
+        .section-title {
             text-align: center;
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-top: 5px solid var(--secondary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+        }
+
+        .service-card.mandate-card-ca { border-top: 5px solid var(--crimson); }
+        .service-card.mandate-card-green { border-top: 5px solid var(--accent); }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style-type: square;
+            padding-left: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-link {
+            display: inline-block;
             background-color: var(--primary);
             color: var(--text-light);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            margin-top: 4rem;
-        }
-
-        .btn-cta {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            padding: 0.8rem 2rem;
             text-decoration: none;
+            padding: 0.6rem 1.2rem;
             border-radius: 4px;
-            font-weight: bold;
-            margin-top: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: auto;
             transition: background-color 0.3s;
         }
 
-        .btn-cta:hover {
-            background-color: #991b1b;
+        .service-card.mandate-card-ca .btn-link { background-color: var(--crimson); }
+        .service-card.mandate-card-green .btn-link { background-color: var(--accent); }
+
+        .btn-link:hover { background-color: var(--secondary); }
+        .service-card.mandate-card-ca .btn-link:hover { background-color: #991b1b; }
+        .service-card.mandate-card-green .btn-link:hover { background-color: #047857; }
+
+        /* Deep Dive Content Styling */
+        .deep-dive-container {
+            background-color: var(--bg-light);
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        
+        .deep-dive-section {
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+        }
+
+        .deep-dive-section:last-child {
+            margin-bottom: 0;
+        }
+
+        h3.dive-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ca-title { border-bottom: 3px solid var(--crimson); padding-bottom: 0.5rem; }
+        .green-title { border-bottom: 3px solid var(--accent); padding-bottom: 0.5rem; }
+
+        .dive-intro {
+            font-size: 1.15rem;
+            color: #374151;
+            margin-bottom: 2rem;
+        }
+
+        .advantage-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .advantage-list { grid-template-columns: 1fr; }
+        }
+
+        .advantage-item {
+            background: white;
+            padding: 1.75rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .advantage-item h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section Split with Headshot */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3.5rem;
+            align-items: start;
+        }
+
+        .about-image-container {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 4px solid white;
+            outline: 1px solid #e5e7eb;
+        }
+
+        .about-text h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            color: #374151;
+        }
+
+        .stats-banner {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1.75rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #60a5fa;
+            line-height: 1;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
         }
 
         footer {
@@ -164,76 +303,231 @@
             text-align: center;
             padding: 1.5rem;
             font-size: 0.85rem;
-            margin-top: 4rem;
+        }
+
+        @media (max-width: 900px) {
+            .about-container { 
+                grid-template-columns: 1fr; 
+                gap: 2rem;
+            }
+            .about-image-container {
+                order: -1;
+            }
+            .profile-img {
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            nav ul { margin-top: 1rem; }
+            .hero h1 { font-size: 2.25rem; }
+            .stats-banner { flex-direction: column; text-align: center; gap: 0.5rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav>
         <div class="logo">BRANDON KIRBY, MBA</div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#specialized-mandates">Specialized Mandates</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Canada First Investing</h1>
-        <p>Structuring domestic capital portfolios to capitalize on local macro-trends, enterprise security, and strong sovereign baselines.</p>
+        <h1>Strategic Wealth & Protection Strategies</h1>
+        <p>Bringing over 22 years of deep financial sector expertise to help Canadian individuals and families navigate wealth management, optimized tax planning, and comprehensive insurance portfolios.</p>
     </header>
 
-    <section>
-        <a href="index.html#services" class="back-link">&larr; Back to Main Services</a>
-        
-        <!-- Header 1 Section -->
-        <div class="intro-text">
-            <h2 class="content-heading">The Power of Canada-First Investing: Smart Portfolio Growth</h2>
-            <p>When building a long-term wealth strategy, the old saying "invest in what you know" carries real weight. For Canadian investors, focusing a strategic portion of your portfolio on domestic markets isn't just about national pride—it’s about capitalizing on structural, regulatory, and tax advantages built specifically for you.</p>
-            <p>A Canada-First Investing framework doesn't mean ignoring global opportunities; rather, it means intentionally anchoring your foundational capital in the businesses, infrastructure, and financial systems driving our domestic economy.</p>
-        </div>
-
-        <!-- Header 2 Section -->
-        <h2 class="content-heading">The Advantages of Keeping Your Capital Close to Home</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #374151;">
-            While global markets offer scale, the Canadian financial landscape provides specific mathematical and structural benefits that directly impact your net returns:
-        </p>
-
-        <div class="advantage-grid">
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="services-grid">
             
-            <div class="advantage-card">
-                <h3>Unmatched Tax Efficiency</h3>
-                <p>One of the greatest levers for Canadian wealth creation is the Eligible Dividend Tax Credit. When you invest in taxable Canadian corporations, the dividends you receive are taxed at a significantly lower effective rate than foreign dividends or interest income. This means more compounding power remains inside your portfolio.</p>
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div>
+                    <h3>Wealth Management & Advice</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Structured portfolio alignment built to withstand shifting macroeconomic conditions.</p>
+                    <ul>
+                        <li>Exchange-Traded Funds (ETFs)</li>
+                        <li>Registered Retirement Savings Plans (RRSPs)</li>
+                        <li>Tax-Free Savings Accounts (TFSAs)</li>
+                        <li>Registered Education Savings Plans (RESPs)</li>
+                        <li>Registered Disability Savings Plans (RDSPs)</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="advantage-card">
-                <h3>Eliminating Currency Friction</h3>
-                <p>Investing heavily in foreign denominations (like the USD) introduces currency risk. A shifting exchange rate can silently erode your market gains when it's time to convert those funds back into Canadian dollars for retirement income. Domestically anchored investments eliminate this volatility entirely.</p>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div>
+                    <h3>Risk & Insurance Solutions</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Comprehensive asset and personal protection tailored to your long-term security needs.</p>
+                    <ul>
+                        <li>Term Life Insurance</li>
+                        <li>Whole Life Insurance</li>
+                        <li>Universal Life Insurance</li>
+                        <li>Comprehensive Health Insurance</li>
+                        <li>International Travel Insurance</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="advantage-card">
-                <h3>Sector-Leading Stability</h3>
-                <p>The Canadian equity market is heavily weighted toward deeply entrenched, highly regulated sectors—specifically financials, energy, and industrials. These sectors traditionally offer robust corporate governance, reliable balance sheets, and consistent dividend payouts, making them ideal anchors for volatile economic cycles.</p>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div>
+                    <h3>Macro Insights & Tax Strategy</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Leveraging deep analytical capability to protect your capital from real market risks.</p>
+                    <ul>
+                        <li>Expertise in interest rates & inflation trends</li>
+                        <li>Strategic personal tax optimization planning</li>
+                        <li>Debt restructuring & structural market risk mitigation</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="advantage-card">
-                <h3>Optimized Registered Accounts</h3>
-                <p>Maximizing the growth of your TFSA and RRSP means understanding the rules. For instance, holding foreign dividend-paying equities in a standard taxable account or TFSA can trigger foreign non-resident withholding taxes. A tailored domestic strategy ensures your assets are located in the exact accounts that shield them best.</p>
+            <!-- Mandate 1: Canada First Investing -->
+            <div class="service-card mandate-card-ca">
+                <div>
+                    <h3>Canada First Investing</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Domestic wealth growth focusing on resilient national infrastructure, resource sectors, and robust Canadian corporate tax leaders.</p>
+                    <ul>
+                        <li>National Resource Infrastructure</li>
+                        <li>Cross-Provincial Corporate Tailwinds</li>
+                        <li>Currency Risk Mitigation</li>
+                    </ul>
+                </div>
+                <a href="#canada-first-deep-dive" class="btn-link">View Strategy Details</a>
             </div>
 
-        </div>
+            <!-- Mandate 2: Green Tech Investing -->
+            <div class="service-card mandate-card-green">
+                <div>
+                    <h3>Green Tech Investing</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Positioning capital directly into standard-setting clean-energy infrastructure, grid transformation, and resource efficiency.</p>
+                    <ul>
+                        <li>Renewable Infrastructure Capital</li>
+                        <li>Electrification Ecosystems</li>
+                        <li>Sustainable Enterprise Architecture</li>
+                    </ul>
+                </div>
+                <a href="#green-tech-deep-dive" class="btn-link">View Strategy Details</a>
+            </div>
 
-        <div class="contact-cta">
-            <h2>Build Your Domestic Investment Anchor</h2>
-            <p>Let's map out an equity structure focused on stable, high-conviction Canadian enterprises tailored directly to your balance sheet needs.</p>
-            <a href="index.html#contact" class="btn-cta">Consult with Brandon</a>
         </div>
     </section>
 
+    <!-- Deep Dive Content Section -->
+    <section id="specialized-mandates" style="border-top: 1px solid #e5e7eb;">
+        <h2 class="section-title">Specialized Portfolio Management</h2>
+        
+        <div class="deep-dive-container">
+            
+            <!-- Canada First Detailed Content Block -->
+            <div id="canada-first-deep-dive" class="deep-dive-section">
+                <h3 class="dive-title ca-title">The Power of Canada-First Investing: Smart Portfolio Growth</h3>
+                <div class="dive-intro">
+                    <p style="margin-bottom: 1rem;">When building a long-term wealth strategy, the old saying "invest in what you know" carries real weight. For Canadian investors, focusing a strategic portion of your portfolio on domestic markets isn't just about national pride—it’s about capitalizing on structural, regulatory, and tax advantages built specifically for you.</p>
+                    <p>A Canada-First Investing framework doesn't mean ignoring global opportunities; rather, it means intentionally anchoring your foundational capital in the businesses, infrastructure, and financial systems driving our domestic economy.</p>
+                </div>
+                
+                <h4 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">The Advantages of Keeping Your Capital Close to Home</h4>
+                <div class="advantage-list">
+                    <div class="advantage-item">
+                        <h4>Unmatched Tax Efficiency</h4>
+                        <p>One of the greatest levers for Canadian wealth creation is the Eligible Dividend Tax Credit. When you invest in taxable Canadian corporations, the dividends you receive are taxed at a significantly lower effective rate than foreign dividends or interest income. This means more compounding power remains inside your portfolio.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h4>Eliminating Currency Friction</h4>
+                        <p>Investing heavily in foreign denominations (like the USD) introduces currency risk. A shifting exchange rate can silently erode your market gains when it's time to convert those funds back into Canadian dollars for retirement income. Domestically anchored investments eliminate this volatility entirely.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h4>Sector-Leading Stability</h4>
+                        <p>The Canadian equity market is heavily weighted toward deeply entrenched, highly regulated sectors—specifically financials, energy, and industrials. These sectors traditionally offer robust corporate governance, reliable balance sheets, and consistent dividend payouts, making them ideal anchors for volatile economic cycles.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h4>Optimized Registered Accounts</h4>
+                        <p>Maximizing the growth of your TFSA and RRSP means understanding the rules. For instance, holding foreign dividend-paying equities in a standard taxable account or TFSA can trigger foreign non-resident withholding taxes. A tailored domestic strategy ensures your assets are located in the exact accounts that shield them best.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: 0; height: 1px; background: #e5e7eb; margin: 4rem 0;">
+
+            <!-- Green Tech Detailed Content Block -->
+            <div id="green-tech-deep-dive" class="deep-dive-section">
+                <h3 class="dive-title green-title">Green Tech Investing: Allocating for the Next Industrial Era</h3>
+                <div class="dive-intro">
+                    <p style="margin-bottom: 1rem;">Sustainable wealth generation requires analyzing multi-decade structural shifts. As corporate regulatory baselines tighten globally and massive green capital subsidies scale upward, forward-thinking environmental tech allocations represent an excellent choice for generation-spanning risk mitigation and alpha generation.</p>
+                </div>
+                
+                <h4 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Key Pillars of Green Allocation</h4>
+                <div class="advantage-list">
+                    <div class="advantage-item">
+                        <h4>Renewable Energy & Base Load Infrastructure</h4>
+                        <p>Targeting clean power solutions including solar, commercial wind production, and advanced run-of-river hydro projects. These tangible capital assets benefit from structural utility backing and reliable, multi-decade cash flow yield profiles.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h4>High-Capacity Grid & Electrification</h4>
+                        <p>Positioning funds within component infrastructure, safe battery technology storage networks, and smart transmission equipment built to support expanding regional demand for clean heavy vehicle and urban transport industrial grids.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <h4>Resource Circularity & Waste Engineering</h4>
+                        <p>Focusing on capital deployments in enterprise systems engineering that advance automated carbon accounting metrics, optimized water treatment loops, and eco-efficient industrial manufacturing platforms.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="border-top: 1px solid #e5e7eb;">
+        <h2 class="section-title">About Brandon Kirby</h2>
+        <div class="about-container">
+            
+            <!-- Profile Photo Column -->
+            <div class="about-image-container">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQETfG4WZ89xDQ/profile-displayphoto-crop_800_800/B56Z7_EYQwKUAQ-/0/1782395800423?e=1784160000&v=beta&t=QQHrxzhvNb_2rNlZC4jrjKM7RuIPGEuWe9IMg8LPX9w" alt="Brandon Kirby, MBA" class="profile-img">
+            </div>
+
+            <!-- Narrative Column -->
+            <div class="about-text">
+                <h3>A Quantitative and Analytical Approach to Finance</h3>
+                <p>With more than two decades embedded within the financial landscape, my approach goes beyond simple product selection. Holding an MBA with an emphasis on Global AML regulations, I analyze the markets through a highly rigorous logical and structural framework.</p>
+                <p>My career has spanned personal banking, mortgage specialization, compliance, and advanced data analytics. I leverage this diverse toolkit to demystify complex economic indicators like structural inflation and interest rate trajectories, translating macro data into actionable strategies for everyday Canadians.</p>
+                
+                <div class="stats-banner">
+                    <div class="stats-number">22+ Years Experience</div>
+                    <div style="font-style: italic; font-size: 1.05rem;">
+                        "Navigating interest rates, tax efficiency, and life transitions with clarity."
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-info">
+        <h2 style="margin-bottom: 1.5rem;">Let's Connect</h2>
+        <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Brandon Kirby, MBA</p>
+        <p>Fredericton, New Brunswick, Canada</p>
+        <p>Email: bm359@hotmail.com</p>
+        <p>Phone: 1-506-440-1913</p>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Brandon Kirby. All Rights Reserved.</p>
+        <p style="font-size: 0.75rem; margin-top: 0.5rem; color: #6b7280;">Disclaimer: Licensing credentials via IFIC and LLQP framework. Specific financial strategies and product availabilities are subject to provincial regulatory guidelines.</p>
     </footer>
 
 </body>
