@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandon Kirby | Wealth, Insurance & Tax Advisory</title>
+    <title>Canada First Investing | Brandon Kirby</title>
     <style>
         :root {
             --primary: #0f2b46;
@@ -66,181 +66,85 @@
             color: #93c5fd;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(15, 43, 70, 0.9), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        /* Hero Subpage */
+        .hero-sub {
+            background: linear-gradient(rgba(15, 43, 70, 0.95), rgba(15, 43, 70, 0.85)), url('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
             color: var(--text-light);
-            padding: 8rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        .hero-sub h1 {
+            font-size: 2.75rem;
             margin-bottom: 1rem;
         }
 
-        .hero p {
-            font-size: 1.25rem;
+        .hero-sub p {
+            font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto 2rem auto;
-        }
-
-        /* Sections General */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.25rem;
+        /* Content Container */
+        .content-container {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .intro-lead {
+            font-size: 1.25rem;
+            color: #374151;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid var(--secondary);
+            padding-left: 1.5rem;
+        }
+
+        .strategy-block {
+            margin-bottom: 3.5rem;
+        }
+
+        .strategy-block h2 {
             color: var(--primary);
-            margin-bottom: 3rem;
-            position: relative;
+            font-size: 1.75rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background-color: var(--secondary);
-            margin: 10px auto 0 auto;
-            border-radius: 2px;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--bg-light);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-top: 5px solid var(--secondary);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s;
-        }
-
-        .service-card.mandate-card {
-            border-top: 5px solid var(--accent);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: var(--primary);
+        .strategy-block p {
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: #4b5563;
+            font-size: 1.05rem;
         }
 
-        .service-card ul {
+        /* Bullet lists */
+        .strategy-block ul {
             list-style-type: square;
-            padding-left: 1.25rem;
-            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            margin: 1rem 0 1.5rem 0;
         }
 
-        .service-card li {
+        .strategy-block li {
             margin-bottom: 0.5rem;
+            color: #1f2937;
         }
 
-        .btn-link {
+        /* Back Button */
+        .btn-back {
             display: inline-block;
             background-color: var(--primary);
             color: var(--text-light);
             text-decoration: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 4px;
             font-weight: 500;
-            text-align: center;
-            margin-top: auto;
             transition: background-color 0.3s;
-        }
-
-        .service-card.mandate-card .btn-link {
-            background-color: var(--accent);
-        }
-
-        .btn-link:hover {
-            background-color: var(--secondary);
-        }
-
-        .service-card.mandate-card .btn-link:hover {
-            background-color: #047857;
-        }
-
-        /* About Section Split with Headshot */
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3.5rem;
-            align-items: start;
-        }
-
-        .about-image-container {
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 320px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border: 4px solid white;
-            outline: 1px solid #e5e7eb;
-        }
-
-        .about-text h3 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1.25rem;
-            font-size: 1.05rem;
-            color: #374151;
-        }
-
-        .stats-banner {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 1.75rem;
-            border-radius: 8px;
             margin-top: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
         }
 
-        .stats-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #60a5fa;
-            line-height: 1;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            text-align: center;
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.5rem;
+        .btn-back:hover {
+            background-color: var(--secondary);
         }
 
         footer {
@@ -249,26 +153,13 @@
             text-align: center;
             padding: 1.5rem;
             font-size: 0.85rem;
-        }
-
-        @media (max-width: 900px) {
-            .about-container { 
-                grid-template-columns: 1fr; 
-                gap: 2rem;
-            }
-            .about-image-container {
-                order: -1;
-            }
-            .profile-img {
-                max-width: 260px;
-            }
+            margin-top: 4rem;
         }
 
         @media (max-width: 768px) {
             nav { flex-direction: column; }
             nav ul { margin-top: 1rem; }
-            .hero h1 { font-size: 2.25rem; }
-            .stats-banner { flex-direction: column; text-align: center; gap: 0.5rem; }
+            .hero-sub h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -277,121 +168,44 @@
     <nav>
         <div class="logo">BRANDON KIRBY, MBA</div>
         <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1>Strategic Wealth & Protection Strategies</h1>
-        <p>Bringing over 22 years of deep financial sector expertise to help Canadian individuals and families navigate wealth management, optimized tax planning, and comprehensive insurance portfolios.</p>
+    <header class="hero-sub">
+        <h1>Canada First Investing</h1>
+        <p>A macroeconomic approach to capital growth through resilient domestic infrastructure and foundational corporate sectors.</p>
     </header>
 
-    <section id="services">
-        <h2 class="section-title">Areas of Expertise</h2>
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <div>
-                    <h3>Wealth Management & Advice</h3>
-                    <p style="margin-bottom: 1rem; color: #4b5563;">Structured portfolio alignment built to withstand shifting macroeconomic conditions.</p>
-                    <ul>
-                        <li>Exchange-Traded Funds (ETFs)</li>
-                        <li>Registered Retirement Savings Plans (RRSPs)</li>
-                        <li>Tax-Free Savings Accounts (TFSAs)</li>
-                        <li>Registered Education Savings Plans (RESPs)</li>
-                        <li>Registered Disability Savings Plans (RDSPs)</li>
-                    </ul>
-                </div>
-            </div>
+    <main class="content-container">
+        <p class="intro-lead">
+            In an era defined by global supply chain reconfigurations and shifting cross-border dynamics, focusing heavily on domestic economic foundations offers unmatched structural advantages, legal stability, and intrinsic currency risk mitigation.
+        </p>
 
-            <div class="service-card">
-                <div>
-                    <h3>Risk & Insurance Solutions</h3>
-                    <p style="margin-bottom: 1rem; color: #4b5563;">Comprehensive asset and personal protection tailored to your long-term security needs.</p>
-                    <ul>
-                        <li>Term Life Insurance</li>
-                        <li>Whole Life Insurance</li>
-                        <li>Universal Life Insurance</li>
-                        <li>Comprehensive Health Insurance</li>
-                        <li>International Travel Insurance</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <h3>Macro Insights & Tax Strategy</h3>
-                    <p style="margin-bottom: 1rem; color: #4b5563;">Leveraging deep analytical capability to protect your capital from real market risks.</p>
-                    <ul>
-                        <li>Expertise in interest rates & inflation trends</li>
-                        <li>Strategic personal tax optimization planning</li>
-                        <li>Debt restructuring & structural market risk mitigation</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-card mandate-card">
-                <div>
-                    <h3>Canada First Investing</h3>
-                    <p style="margin-bottom: 1rem; color: #4b5563;">Domestic wealth growth focusing on resilient national infrastructure, resource sectors, and robust Canadian corporate tax leaders.</p>
-                    <ul>
-                        <li>National Resource Infrastructure</li>
-                        <li>Cross-Provincial Corporate Tailwinds</li>
-                        <li>Currency Risk Mitigation</li>
-                    </ul>
-                </div>
-                <a href="canada-first.html" class="btn-link">View Strategy Details</a>
-            </div>
-
-            <div class="service-card mandate-card">
-                <div>
-                    <h3>Green Tech Investing</h3>
-                    <p style="margin-bottom: 1rem; color: #4b5563;">Positioning capital directly into standard-setting clean-energy infrastructure, grid transformation, and resource efficiency.</p>
-                    <ul>
-                        <li>Renewable Infrastructure Capital</li>
-                        <li>Electrification Ecosystems</li>
-                        <li>Sustainable Enterprise Architecture</li>
-                    </ul>
-                </div>
-                <a href="green-tech.html" class="btn-link">View Strategy Details</a>
-            </div>
-
+        <div class="strategy-block">
+            <h2>National Resource Infrastructure</h2>
+            <p>Canada boasts some of the most critical structural assets in the modern world. This mandate targets established entities that own and operate key midstream energy assets, transportation channels, and processing frameworks. These organizations typically possess deep economic moats that insulate them effectively from speculative, hyper-volatile technology cycles.</p>
         </div>
-    </section>
 
-    <section id="about" style="border-top: 1px solid #e5e7eb;">
-        <h2 class="section-title">About Brandon Kirby</h2>
-        <div class="about-container">
-            
-            <div class="about-image-container">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQETfG4WZ89xDQ/profile-displayphoto-crop_800_800/B56Z7_EYQwKUAQ-/0/1782395800423?e=1784160000&v=beta&t=QQHrxzhvNb_2rNlZC4jrjKM7RuIPGEuWe9IMg8LPX9w" alt="Brandon Kirby, MBA" class="profile-img">
-            </div>
-
-            <div class="about-text">
-                <h3>A Quantitative and Analytical Approach to Finance</h3>
-                <p>With more than two decades embedded within the financial landscape, my approach goes beyond simple product selection. Holding an MBA with an emphasis on Global AML regulations, I analyze the markets through a highly rigorous logical and structural framework.</p>
-                <p>My career has spanned personal banking, mortgage specialization, compliance, and advanced data analytics. I leverage this diverse toolkit to demystify complex economic indicators like structural inflation and interest rate trajectories, translating macro data into actionable strategies for everyday Canadians.</p>
-                
-                <div class="stats-banner">
-                    <div class="stats-number">22+ Years Experience</div>
-                    <div style="font-style: italic; font-size: 1.05rem;">
-                        "Navigating interest rates, tax efficiency, and life transitions with clarity."
-                    </div>
-                </div>
-            </div>
-
+        <div class="strategy-block">
+            <h2>Cross-Provincial Corporate Tailwinds</h2>
+            <p>Our quantitative selection framework identifies firms structurally poised to outpace standard metrics due to favorable regulatory changes or regional demographic shifts. Key considerations include:</p>
+            <ul>
+                <li><strong>Provincial Fiscal Trajectories:</strong> Identifying areas with robust corporate tax revenues and stable public sector infrastructure project commitments.</li>
+                <li><strong>Banking Sector Stability:</strong> Leveraging the historical and systemic resilience of Canada’s highly regulated core financial system.</li>
+                <li><strong>Consumer Defensiveness:</strong> Emphasizing utilities, grocery, and communication systems that yield strong cash flows across all economic environments.</li>
+            </ul>
         </div>
-    </section>
 
-    <div id="contact" class="contact-info">
-        <h2 style="margin-bottom: 1.5rem;">Let's Connect</h2>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Brandon Kirby, MBA</p>
-        <p>Fredericton, New Brunswick, Canada</p>
-        <p>Email: bm359@hotmail.com</p>
-        <p>Phone: 1-506-440-1913</p>
-    </div>
+        <div class="strategy-block">
+            <h2>Currency Risk Mitigation</h2>
+            <p>For Canadian households, matching long-term liabilities (retirement, education, healthcare) with CAD-denominated assets protects purchasing power from severe global foreign exchange swings. By removing excessive foreign currency volatility, portfolios can focus on organic corporate growth and steady dividend compounding.</p>
+        </div>
+
+        <a href="index.html#services" class="btn-back">&larr; Back to Main Site</a>
+    </main>
 
     <footer>
         <p>&copy; 2026 Brandon Kirby. All Rights Reserved.</p>
