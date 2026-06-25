@@ -123,7 +123,14 @@
             border-radius: 8px;
             border-top: 5px solid var(--secondary);
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             transition: transform 0.3s;
+        }
+
+        .service-card.mandate-card {
+            border-top: 5px solid var(--accent);
         }
 
         .service-card:hover {
@@ -139,10 +146,36 @@
         .service-card ul {
             list-style-type: square;
             padding-left: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-card li {
             margin-bottom: 0.5rem;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: auto;
+            transition: background-color 0.3s;
+        }
+
+        .service-card.mandate-card .btn-link {
+            background-color: var(--accent);
+        }
+
+        .btn-link:hover {
+            background-color: var(--secondary);
+        }
+
+        .service-card.mandate-card .btn-link:hover {
+            background-color: #047857;
         }
 
         /* About Section Split with Headshot */
@@ -241,7 +274,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <div class="logo">BRANDON KIRBY, MBA</div>
         <ul>
@@ -251,68 +283,92 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <h1>Strategic Wealth & Protection Strategies</h1>
         <p>Bringing over 22 years of deep financial sector expertise to help Canadian individuals and families navigate wealth management, optimized tax planning, and comprehensive insurance portfolios.</p>
     </header>
 
-    <!-- Services Section -->
     <section id="services">
         <h2 class="section-title">Areas of Expertise</h2>
         <div class="services-grid">
             
-            <!-- Service 1 -->
             <div class="service-card">
-                <h3>Wealth Management & Advice</h3>
-                <p style="margin-bottom: 1rem; color: #4b5563;">Structured portfolio alignment built to withstand shifting macroeconomic conditions.</p>
-                <ul>
-                    <li>Exchange-Traded Funds (ETFs)</li>
-                    <li>Registered Retirement Savings Plans (RRSPs)</li>
-                    <li>Tax-Free Savings Accounts (TFSAs)</li>
-                    <li>Registered Education Savings Plans (RESPs)</li>
-                    <li>Registered Disability Savings Plans (RDSPs)</li>
-                </ul>
+                <div>
+                    <h3>Wealth Management & Advice</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Structured portfolio alignment built to withstand shifting macroeconomic conditions.</p>
+                    <ul>
+                        <li>Exchange-Traded Funds (ETFs)</li>
+                        <li>Registered Retirement Savings Plans (RRSPs)</li>
+                        <li>Tax-Free Savings Accounts (TFSAs)</li>
+                        <li>Registered Education Savings Plans (RESPs)</li>
+                        <li>Registered Disability Savings Plans (RDSPs)</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Service 2 -->
             <div class="service-card">
-                <h3>Risk & Insurance Solutions</h3>
-                <p style="margin-bottom: 1rem; color: #4b5563;">Comprehensive asset and personal protection tailored to your long-term security needs.</p>
-                <ul>
-                    <li>Term Life Insurance</li>
-                    <li>Whole Life Insurance</li>
-                    <li>Universal Life Insurance</li>
-                    <li>Comprehensive Health Insurance</li>
-                    <li>International Travel Insurance</li>
-                </ul>
+                <div>
+                    <h3>Risk & Insurance Solutions</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Comprehensive asset and personal protection tailored to your long-term security needs.</p>
+                    <ul>
+                        <li>Term Life Insurance</li>
+                        <li>Whole Life Insurance</li>
+                        <li>Universal Life Insurance</li>
+                        <li>Comprehensive Health Insurance</li>
+                        <li>International Travel Insurance</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Service 3 -->
             <div class="service-card">
-                <h3>Macro Insights & Tax Strategy</h3>
-                <p style="margin-bottom: 1rem; color: #4b5563;">Leveraging deep analytical capability to protect your capital from real market risks.</p>
-                <ul>
-                    <li>Expertise in interest rates & inflation trends</li>
-                    <li>Strategic personal tax optimization planning</li>
-                    <li>Debt restructuring & structural market risk mitigation</li>
-                </ul>
+                <div>
+                    <h3>Macro Insights & Tax Strategy</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Leveraging deep analytical capability to protect your capital from real market risks.</p>
+                    <ul>
+                        <li>Expertise in interest rates & inflation trends</li>
+                        <li>Strategic personal tax optimization planning</li>
+                        <li>Debt restructuring & structural market risk mitigation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-card mandate-card">
+                <div>
+                    <h3>Canada First Investing</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Domestic wealth growth focusing on resilient national infrastructure, resource sectors, and robust Canadian corporate tax leaders.</p>
+                    <ul>
+                        <li>National Resource Infrastructure</li>
+                        <li>Cross-Provincial Corporate Tailwinds</li>
+                        <li>Currency Risk Mitigation</li>
+                    </ul>
+                </div>
+                <a href="canada-first.html" class="btn-link">View Strategy Details</a>
+            </div>
+
+            <div class="service-card mandate-card">
+                <div>
+                    <h3>Green Tech Investing</h3>
+                    <p style="margin-bottom: 1rem; color: #4b5563;">Positioning capital directly into standard-setting clean-energy infrastructure, grid transformation, and resource efficiency.</p>
+                    <ul>
+                        <li>Renewable Infrastructure Capital</li>
+                        <li>Electrification Ecosystems</li>
+                        <li>Sustainable Enterprise Architecture</li>
+                    </ul>
+                </div>
+                <a href="green-tech.html" class="btn-link">View Strategy Details</a>
             </div>
 
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" style="border-top: 1px solid #e5e7eb;">
         <h2 class="section-title">About Brandon Kirby</h2>
         <div class="about-container">
             
-            <!-- Profile Photo Column -->
             <div class="about-image-container">
                 <img src="https://media.licdn.com/dms/image/v2/D5603AQETfG4WZ89xDQ/profile-displayphoto-crop_800_800/B56Z7_EYQwKUAQ-/0/1782395800423?e=1784160000&v=beta&t=QQHrxzhvNb_2rNlZC4jrjKM7RuIPGEuWe9IMg8LPX9w" alt="Brandon Kirby, MBA" class="profile-img">
             </div>
 
-            <!-- Narrative Column -->
             <div class="about-text">
                 <h3>A Quantitative and Analytical Approach to Finance</h3>
                 <p>With more than two decades embedded within the financial landscape, my approach goes beyond simple product selection. Holding an MBA with an emphasis on Global AML regulations, I analyze the markets through a highly rigorous logical and structural framework.</p>
@@ -329,7 +385,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <div id="contact" class="contact-info">
         <h2 style="margin-bottom: 1.5rem;">Let's Connect</h2>
         <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Brandon Kirby, MBA</p>
@@ -338,7 +393,6 @@
         <p>Phone: 1-506-440-1913</p>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Brandon Kirby. All Rights Reserved.</p>
         <p style="font-size: 0.75rem; margin-top: 0.5rem; color: #6b7280;">Disclaimer: Licensing credentials via IFIC and LLQP framework. Specific financial strategies and product availabilities are subject to provincial regulatory guidelines.</p>
