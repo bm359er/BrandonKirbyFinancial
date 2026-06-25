@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada First Investing | Brandon Kirby Advisory</title>
+    <style>
+        :root {
+            --primary: #0f2b46;
+            --secondary: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-light: #f9fafb;
+            --bg-light: #f3f4f6;
+            --accent: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 43, 70, 0.95), rgba(15, 43, 70, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Structure */
+        section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .strategy-block {
+            margin-bottom: 3rem;
+        }
+
+        .strategy-block h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+
+        .strategy-block p {
+            font-size: 1.1rem;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Bullet List styling matching home page layout */
+        .detail-list {
+            list-style-type: square;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .detail-list li {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .detail-list strong {
+            color: var(--primary);
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-back:hover {
+            background-color: var(--secondary);
+        }
+
+        footer {
+            background-color: #0b1f33;
+            color: #9ca3af;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BRANDON KIRBY, MBA</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Canada First Investing</h1>
+        <p>A strategic investment mandate engineered to prioritize resilient domestic infrastructure, resource stability, and core Canadian economic drivers.</p>
+    </header>
+
+    <section>
+        <div class="strategy-block">
+            <h2>Strategy Framework</h2>
+            <p>Our domestic markets present unique, structurally sound competitive advantages. The Canada First Investment approach targets key national engines designed to generate long-term stability and hedge against cross-border volatility.</p>
+            
+            <ul class="detail-list">
+                <li><strong>National Resource Infrastructure:</strong> Directing capital allocations toward primary transport, logistics systems, and robust energy distribution networks driving the core of North American industry.</li>
+                <li><strong>Cross-Provincial Corporate Tailwinds:</strong> Capitalizing on business models structurally positioned to capture legislative and corporate tax efficiencies across individual provinces.</li>
+                <li><strong>Currency Risk Mitigation:</strong> Minimizing the drag of international currency fluctuations on portfolio performance by systematically optimizing domestic capital dependencies.</li>
+            </ul>
+        </div>
+
+        <div class="strategy-block" style="background: var(--bg-light); padding: 2rem; border-radius: 8px;">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">Why Domestic Allocation Matters</h3>
+            <p style="font-size: 1rem; margin-bottom: 0;">By combining analytical data tools with real macroeconomic metrics—such as provincial corporate tax trends, changing interest rate environments, and supply-chain logistics—this framework acts as an intentional balance to highly speculative global technology and international currency dependencies.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="btn-back">&larr; Return to Main Advisory Page</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Brandon Kirby. All Rights Reserved.</p>
+        <p style="font-size: 0.75rem; margin-top: 0.5rem; color: #6b7280;">Disclaimer: Licensing credentials via IFIC and LLQP framework. Specific financial strategies and product availabilities are subject to provincial regulatory guidelines.</p>
+    </footer>
+
+</body>
+</html>
