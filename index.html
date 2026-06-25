@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Kirby | Wealth, Insurance & Tax Advisory</title>
+    <style>
+        :root {
+            --primary: #0f2b46;
+            --secondary: #1d4ed8;
+            --text-dark: #1f2937;
+            --text-light: #f9fafb;
+            --bg-light: #f3f4f6;
+            --accent: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 43, 70, 0.9), rgba(15, 43, 70, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        /* Sections General */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-top: 5px solid var(--secondary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card ul {
+            list-style-type: square;
+            padding-left: 1.25rem;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section Split with Headshot */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3.5rem;
+            align-items: start;
+        }
+
+        .about-image-container {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 4px solid white;
+            outline: 1px solid #e5e7eb;
+        }
+
+        .about-text h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            color: #374151;
+        }
+
+        .stats-banner {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 1.75rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #60a5fa;
+            line-height: 1;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #0b1f33;
+            color: #9ca3af;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .about-container { 
+                grid-template-columns: 1fr; 
+                gap: 2rem;
+            }
+            .about-image-container {
+                order: -1;
+            }
+            .profile-img {
+                max-width: 260px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            nav ul { margin-top: 1rem; }
+            .hero h1 { font-size: 2.25rem; }
+            .stats-banner { flex-direction: column; text-align: center; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">BRANDON KIRBY, MBA</div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Strategic Wealth & Protection Strategies</h1>
+        <p>Bringing over 22 years of deep financial sector expertise to help Canadian individuals and families navigate wealth management, optimized tax planning, and comprehensive insurance portfolios.</p>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+                <h3>Wealth Management & Advice</h3>
+                <p style="margin-bottom: 1rem; color: #4b5563;">Structured portfolio alignment built to withstand shifting macroeconomic conditions.</p>
+                <ul>
+                    <li>Exchange-Traded Funds (ETFs)</li>
+                    <li>Registered Retirement Savings Plans (RRSPs)</li>
+                    <li>Tax-Free Savings Accounts (TFSAs)</li>
+                    <li>Registered Education Savings Plans (RESPs)</li>
+                    <li>Registered Disability Savings Plans (RDSPs)</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <h3>Risk & Insurance Solutions</h3>
+                <p style="margin-bottom: 1rem; color: #4b5563;">Comprehensive asset and personal protection tailored to your long-term security needs.</p>
+                <ul>
+                    <li>Term Life Insurance</li>
+                    <li>Whole Life Insurance</li>
+                    <li>Universal Life Insurance</li>
+                    <li>Comprehensive Health Insurance</li>
+                    <li>International Travel Insurance</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <h3>Macro Insights & Tax Strategy</h3>
+                <p style="margin-bottom: 1rem; color: #4b5563;">Leveraging deep analytical capability to protect your capital from real market risks.</p>
+                <ul>
+                    <li>Expertise in interest rates & inflation trends</li>
+                    <li>Strategic personal tax optimization planning</li>
+                    <li>Debt restructuring & structural market risk mitigation</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="border-top: 1px solid #e5e7eb;">
+        <h2 class="section-title">About Brandon Kirby</h2>
+        <div class="about-container">
+            
+            <!-- Profile Photo Column -->
+            <div class="about-image-container">
+                <img src="image_fa388c.jpg" alt="Brandon Kirby, MBA" class="profile-img">
+            </div>
+
+            <!-- Narrative Column -->
+            <div class="about-text">
+                <h3>A Quantitative and Analytical Approach to Finance</h3>
+                <p>With more than two decades embedded within the financial landscape, my approach goes beyond simple product selection. Holding an MBA with an emphasis on Global AML regulations, I analyze the markets through a highly rigorous logical and structural framework.</p>
+                <p>My career has spanned personal banking, mortgage specialization, compliance, and advanced data analytics. I leverage this diverse toolkit to demystify complex economic indicators like structural inflation and interest rate trajectories, translating macro data into actionable strategies for everyday Canadians.</p>
+                
+                <div class="stats-banner">
+                    <div class="stats-number">22+ Years Experience</div>
+                    <div style="font-style: italic; font-size: 1.05rem;">
+                        "Navigating interest rates, tax efficiency, and life transitions with clarity."
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-info">
+        <h2 style="margin-bottom: 1.5rem;">Let's Connect</h2>
+        <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">Brandon Kirby, MBA</p>
+        <p>Fredericton, New Brunswick, Canada</p>
+        <p>Email: bm359@hotmail.com</p>
+        <p>Phone: 1-506-440-1913</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Brandon Kirby. All Rights Reserved.</p>
+        <p style="font-size: 0.75rem; margin-top: 0.5rem; color: #6b7280;">Disclaimer: Licensing credentials via IFIC and LLQP framework. Specific financial strategies and product availabilities are subject to provincial regulatory guidelines.</p>
+    </footer>
+
+</body>
+</html>
